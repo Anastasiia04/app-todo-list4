@@ -1,0 +1,26 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+</div>
+
+<div class="new-project-form"></div>
+<%= link_to 'New project', new_project_path, remote: true, class: "btn btn-primary btn-lg btn-block" %>
+
+<h1>Incomplete project</h1>
+<div class="incomplete-projects">
+	<% @incomplete_projects.each do |project| %>
+		<%= render project %>
+	<% end %>
+</div>
+
+
+
+<h1>Complete project</h1>
+<div class="complete-projects">
+	<% @complete_projects.each do |project| %>
+		<b><%= project.name %></b> by <%= project.user.email %>
+		<br>
+	<% end %> 
+</div>
+
+
+

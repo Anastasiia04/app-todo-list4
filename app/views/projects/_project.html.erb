@@ -1,0 +1,42 @@
+
+
+<%= div_for(project) do %>
+<div class="container">
+	<div class="border-primary">
+		<div class="row">
+			<div class="col-sm-7">
+				<%= project.name %></div> <div class="col-sm-2"> by <%= project.user.email %> </div>
+
+				<% if (project.completed == false) %>
+
+
+				<div class="col-sm-1">
+					<%= link_to complete_path(project), remote: true, :class => "mark-complete-link", class: 'btn btn-outline-success btn-sm' do %> 
+					<%= fa_icon "check" %>
+
+					<% end %>
+
+				</div>
+				<div class="col-sm-1">
+					<%= link_to edit_project_path(project), remote: true, class: 'btn btn-outline-secondary btn-sm' do %> 
+					<%= fa_icon "edit" %>
+
+					<% end %>
+				</div>
+
+				<div class="col-sm-1">
+					<%= link_to project, remote: true, method: :delete, class: 'btn btn-outline-danger btn-sm', data: { confirm: 'Are you sure?' } do %> 
+					<%= fa_icon "trash" %>
+
+					<% end %>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<% end %>
+	<br>
+
+	<% end %>
+	

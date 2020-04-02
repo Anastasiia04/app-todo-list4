@@ -1,0 +1,6 @@
+$('div.new-project-form').empty();
+$('div.new-project-form').show();
+$('div.new-project-form').append("<h3>New Task</h3>");
+$('div.new-project-form').append('<%= j(render(partial: "form", locals:{project: @project}))%>');
+$('a.new-project-link').hide();
+$('#project_name').focus();

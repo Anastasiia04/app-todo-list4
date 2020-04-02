@@ -1,0 +1,3 @@
+$('div.new-project-form').hide();
+$('a.new-project-link').show();
+$('div.incomplete-projects').append('<%= j render(partial: "project", locals:{project: @project}) %>');

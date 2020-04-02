@@ -1,0 +1,2 @@
+$('div#<%= dom_id(@project) %>').empty();
+$('div#<%= dom_id(@project) %>').replaceWith('<%= j(render @project) %>');

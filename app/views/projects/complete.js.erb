@@ -1,0 +1,2 @@
+$('div#<%= dom_id(@project) %>').hide();
+$('div.complete-projects').append('<%= j render(partial: "project", locals:{project: @project}) %>');
